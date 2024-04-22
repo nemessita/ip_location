@@ -1,0 +1,46 @@
+[
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "Figlet",
+        "importPath": "pyfiglet",
+        "description": "pyfiglet",
+        "isExtraImport": true,
+        "detail": "pyfiglet",
+        "documentation": {}
+    },
+    {
+        "label": "folium",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "folium",
+        "description": "folium",
+        "detail": "folium",
+        "documentation": {}
+    },
+    {
+        "label": "get_ip",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_ip(ip='127.0.0.1'):\n    try:\n        response = requests.get(f'http://ip-api.com/json/{ip}').json()\n        # data = response.json()\n        # print(data)\n        data = {\n            '[IP]': response.get('query'),\n            '[Int prov]': response.get('isp'),\n            '[Org]': response.get('org'),\n            '[Country]': response.get('country'),",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main():\n    preview_text = Figlet(font='slant')\n    print(preview_text.renderText('IP INFO'))\n    ip = input('Enter IP: ')\n    get_ip(ip)\nif __name__ == '__main__':\n    main()",
+        "detail": "main",
+        "documentation": {}
+    }
+]
